@@ -220,11 +220,11 @@ with tabs[2]:
     ca, cb, cc = st.columns([5,1,5])
     with ca:
         # Utworzenie suwaka do określenia ceny ropy naftowej
-        oil_price = st.slider('Cena ropy naftowej (USD/baryłkę)', 0, 200, 75)
+        oil_price = st.slider('Cena ropy naftowej (USD/baryłkę)', 0, 150, 75)
                 
     with cc:
         # Utworzenie suwaka do określenia kursu wymiany USD/PLN
-        exchange_rate = st.slider('Kurs wymiany USD/PLN', 1.0, 10.0, 5.0, 0.01)
+        exchange_rate = st.slider('Kurs wymiany USD/PLN', 1.5, 5.0, 4.0, 0.01)
     
     # Predykcja wartości cen paliw z wykorzystaniem modeli ML
     prediction_df = pd.DataFrame([[oil_price, exchange_rate]], columns=['ropa naftowa', 'USD/PLN'])
